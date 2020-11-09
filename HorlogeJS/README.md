@@ -1,1 +1,1 @@
-Horloge en Javascript en utilisant setInterval au lieu de setTimeout.
+ - Horloge en Javascript en utilisant setInterval au lieu de setTimeout.
