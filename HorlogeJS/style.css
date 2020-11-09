@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap');
+
+body,html{
+    margin:0;
+}
+
+.container{
+    display:flex;
+    height:100vh;
+    width: 100vw;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #39CDE7;
+    background: -webkit-linear-gradient(top left, #39CDE7, #3F3EBB);
+    background: -moz-linear-gradient(top left, #39CDE7, #3F3EBB);
+    background: linear-gradient(to bottom right, #39CDE7, #3F3EBB);
+}
+
+h1{
+    font-family: 'Noto Sans JP', sans-serif;
+}
