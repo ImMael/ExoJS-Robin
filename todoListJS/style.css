@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap');
+
+body,html{
+    margin:0;
+}
+
+.container{
+    display:flex;
+    height:100vh;
+    width: 100vw;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #D5FF63;
+    background: -webkit-linear-gradient(top left, #D5FF63, #3D6865);
+    background: -moz-linear-gradient(top left, #D5FF63, #3D6865);
+    background: linear-gradient(to bottom right, #D5FF63, #3D6865);
+}
+
+h1{
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.frame{
+    display:flex;
+    height:80%;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.ajout{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height:10%;
+    width: 60%;
+    background:rgba(255,255,255,0.3);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+input[type=text] {
+  width: 220%;
+  height:180%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #0d7211;
+  background:none;
+  outline:none;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+#btnplus{
+    height:20px;
+    width: 20px;
+    cursor: pointer;
+}
+#liste{
+    display:flex;
+    flex-direction: column;
+    height:80%;
+    width: 60%;
+    background:rgba(255,255,255,0.3);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;   
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.deleted{
+    height:20px;
+    width: 20px;
+    margin-left: 10%;
+    cursor: pointer;
+}
+.elem1{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    width: auto;
+}

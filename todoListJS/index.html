@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>To-Do List</title>
+	<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="container">
+            <div class="frame">
+                <h1>To-Do List (en JS)</h1>
+                <div class="ajout">
+                     <form>
+                         <input type="text" id="addlist" name="addlist">
+                     </form>
+                    <img src="add.png" alt="bouton ajout" id="btnplus" onclick="addTask()"/>
+                </div>
+                <div id="liste">
+                    <div class="elem1" id="sleep"><h3 id="sleep">Dormir</h3><img src="minus.png" alt="moins" id="sleep" class="deleted" onclick="delTask()"/></div>
+                    <div class="elem1" id="thanks"><h3 id="thanks">Remercier Robin</h3><img src="minus.png" alt="moins" id="thanks" class="deleted" onclick="delTask()"/></div>
+                </div>
+            </div>
+        </div>
+	</body>
+<script type="text/javascript" src="script.js"></script>
+</html>
