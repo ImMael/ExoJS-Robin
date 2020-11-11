@@ -1,47 +1,52 @@
 let liste = document.getElementById("liste");
-let inputItem=document.getElementById("addlist");
+let colCat = $('.column-cat');
+let listElement = $('#list-elem');
 let newElem = "elem";
 let number = 1;
 
-function counter(){
-    number = number + 1;
-}
+let div = {
+     "sdqs" : 
+        {
+    
+        },
+};
 
 
-function newItem(item){
+function newItem(item, desc){
     newElem = "elem" + number;
-	let divItem = document.createElement("div");
     
-	let textItem = document.createElement("h3");
+    let divListe = '<div class="newElem '+newElem+'">' + 
+                   '<h1 class="elem '+newElem+'">'+item+'</h1>' + 
+                   '<h4 class="elem '+newElem+'">'+desc+'</h4>' +
+                   '</div>';
+    let divCol = '<div class="cat-elem '+newElem+'">' + 
+                   '<h1 class="col-cat '+newElem+'">'+item+'</h1>' + 
+                   '<img src="minus.png" alt="moins" class="deleted '+newElem+'" onclick="delTask()"/>' +
+                   '</div>';
     
-	let delItem = document.createElement("img");
-    
-    textItem.innerHTML = item;
-    
-    divItem.classList.add("elem1");
-    divItem.setAttribute("id", newElem);
-    
-    delItem.setAttribute("id",newElem)
-    delItem.src = "minus.png";
-    delItem.classList.add("deleted");
-    delItem.setAttribute("onclick", "delTask()");
-    
-    liste.appendChild(divItem);
-	divItem.appendChild(textItem);
-	divItem.appendChild(delItem);
-    counter();
+    colCat.append(divCol);
+    listElement.append(divListe);
+    number++;
 }
 
 function addTask(){
-	let item = newItem(inputItem.value);
+    if( !$('#addlist').val() || !$('#descadd').val() ){
+            alert("Vous n'avez pas remplis les champs requis")
+        } else{
+            newItem($('#addlist').val(),$('#descadd').val());
+        }
 }
 
 function delTask(){
     let r = confirm("Veuillez comfirmer votre choix");
     if (r == true) {
-        let prevElem = document.getElementById(event.srcElement.id);
-        prevElem.remove();
+        let selectedItem = event.srcElement.className;
+        let prevElem = $('.'+selectedItem);
+        let classNames = selectedItem.split(' ');
+        $('.'+classNames[1]).fadeOut(200);
+        
     } else {
         alert("Vous avez annulé");
     }
 }
+

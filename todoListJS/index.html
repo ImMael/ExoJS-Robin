@@ -11,16 +11,36 @@
                 <h1>To-Do List (en JS)</h1>
                 <div class="ajout">
                      <form>
-                         <input type="text" id="addlist" name="addlist">
+                         <input type="text" id="addlist" name="addlist" placeholder="Titre">
+                         <input type="text" id="descadd" name="descadd" placeholder="Description">
                      </form>
                     <img src="add.png" alt="bouton ajout" id="btnplus" onclick="addTask()"/>
                 </div>
                 <div id="liste">
-                    <div class="elem1" id="sleep"><h3 id="sleep">Dormir</h3><img src="minus.png" alt="moins" id="sleep" class="deleted" onclick="delTask()"/></div>
-                    <div class="elem1" id="thanks"><h3 id="thanks">Remercier Robin</h3><img src="minus.png" alt="moins" id="thanks" class="deleted" onclick="delTask()"/></div>
+                    <div class="column-cat" id="column-cat">
+                        <div class="cat-elem">
+                            <h1 id="thanks" class="col-cat">Dormir</h1>
+                            <img src="minus.png" alt="moins" id="thanks" class="deleted" onclick="delTask()"/>
+                        </div>
+                        <div class="cat-elem">
+                            <h1 id="thanks" class="col-cat">Remercier Robin</h1>
+                            <img src="minus.png" alt="moins" id="thanks" class="deleted" onclick="delTask()"/>
+                        </div>
+                    </div>
+                    <div id="list-elem">
+                        <div class="newElem">
+                            <h1 id="thanks" class="elem">Dormir</h1>
+                            <h4 id="thanks" class="elem">Se reposer pour récuperer</h4>
+                        </div>
+                        <div class="newElem">
+                            <h1 id="thanks" class="elem">Remercier Robin</h1>
+                            <h4 id="thanks" class="elem">Thanks de la part de la L1</h4>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="script.js"></script>
 	</body>
-<script type="text/javascript" src="script.js"></script>
 </html>
