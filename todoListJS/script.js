@@ -4,14 +4,6 @@ let listElement = $('#list-elem');
 let newElem = "elem";
 let number = 1;
 
-let div = {
-     "sdqs" : 
-        {
-    
-        },
-};
-
-
 function newItem(item, desc){
     newElem = "elem" + number;
     
